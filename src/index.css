@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* style CSS */
+
+body{
+    background-color: black;
+}
+
+#footer{
+    padding: 30px;
+    margin: 15px;
+    border-radius: 1.5cm;
+}
+
+.loader{
+    font-size: 48px;
+    color: #FFF;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    position: relative;
+    }
+    .loader:before{
+    content: '';
+    animation: 5s print linear alternate infinite;
+    }
+    .loader:after{
+    content: '';
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    transform: translatey(-45%);
+    width: 2px;
+    height: 1.3em;
+    background: currentColor;
+    opacity: 0.8;
+    animation: 1s blink steps(2) infinite;
+    }
+    
+    @keyframes blink {
+    0%  { visibility: hidden;}
+    100%  { visibility: visible;}
+    }
+    @keyframes print {
+    0% { content: 'I'}
+    10% { content: 'Im'}
+    20% { content: 'Ima'}
+    30% { content: 'Imag'}
+    40% { content: 'Image'}
+    50% { content: 'Image G'}
+    60% { content: 'Image Ga'}
+    70% { content: 'Image Gal'}
+    80% { content: 'Image Gall'}
+    90%  { content: 'Image Galle'}
+    95% {content: 'Image Galler';}
+    100% { content: 'Image Gallery';}
+    }
+    
